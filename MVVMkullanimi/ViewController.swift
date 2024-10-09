@@ -12,31 +12,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var textfieldSayi1: UITextField!
     
     @IBOutlet weak var textfieldSayi2: UITextField!
+    
+    var viewModel = AnasayfaViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        labelSonuc.text = "0"
+        labelSonuc.text = viewModel.sonuc
     }
 
     @IBAction func butonCarpma(_ sender: Any) {
 if let alinansayi1 = textfieldSayi1.text, let alinansayi2 = textfieldSayi2.text {
-    if let sayi1=Int(alinansayi1),let sayi2=Int(alinansayi2){
-        let toplam = sayi1 * sayi2
-        labelSonuc.text = String(toplam)
-    }
+    viewModel.caprma(alinansayi1: alinansayi1, alinansayi2: alinansayi2)
+    labelSonuc.text = viewModel.sonuc
         }
-        let alinansayi2 = textfieldSayi2.text
         
     }
+    
+    
     @IBAction func butonToplama(_ sender: Any) {
         if let alinansayi1 = textfieldSayi1.text, let alinansayi2 = textfieldSayi2.text {
-            if let sayi1=Int(alinansayi1),let sayi2=Int(alinansayi2){
-                let toplam = sayi1 + sayi2
-                labelSonuc.text = String(toplam)
-            }
+            viewModel.toplama(alinansayi1: alinansayi1, alinansayi2: alinansayi2)
+            labelSonuc.text = viewModel.sonuc
                 }
-                let alinansayi2 = textfieldSayi2.text
+                
         
     }
     
