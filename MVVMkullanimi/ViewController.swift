@@ -19,13 +19,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        labelSonuc.text = viewModel.sonuc
+        
+        
+        _=viewModel.sonuc.subscribe(onNext: {s in
+            self.labelSonuc.text=s //dinleme
+            
+        })
     }
 
     @IBAction func butonCarpma(_ sender: Any) {
 if let alinansayi1 = textfieldSayi1.text, let alinansayi2 = textfieldSayi2.text {
     viewModel.caprma(alinansayi1: alinansayi1, alinansayi2: alinansayi2)
-    labelSonuc.text = viewModel.sonuc
+    
         }
         
     }
@@ -34,7 +39,7 @@ if let alinansayi1 = textfieldSayi1.text, let alinansayi2 = textfieldSayi2.text 
     @IBAction func butonToplama(_ sender: Any) {
         if let alinansayi1 = textfieldSayi1.text, let alinansayi2 = textfieldSayi2.text {
             viewModel.toplama(alinansayi1: alinansayi1, alinansayi2: alinansayi2)
-            labelSonuc.text = viewModel.sonuc
+            
                 }
                 
         

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		44C6A7EE2CB7BF1D0047D7B4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44C6A7ED2CB7BF1D0047D7B4 /* RxSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		44C6A7942CB6C7EA0047D7B4 /* MVVMkullanimi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMkullanimi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C6A7EE2CB7BF1D0047D7B4 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = MVVMkullanimi;
 			packageProductDependencies = (
+				44C6A7ED2CB7BF1D0047D7B4 /* RxSwift */,
 			);
 			productName = MVVMkullanimi;
 			productReference = 44C6A7942CB6C7EA0047D7B4 /* MVVMkullanimi.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 44C6A78B2CB6C7EA0047D7B4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				44C6A7EC2CB7BF1D0047D7B4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 44C6A7952CB6C7EA0047D7B4 /* Products */;
 			projectDirPath = "";
@@ -335,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44C6A7EC2CB7BF1D0047D7B4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44C6A7ED2CB7BF1D0047D7B4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44C6A7EC2CB7BF1D0047D7B4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44C6A78C2CB6C7EA0047D7B4 /* Project object */;
 }
